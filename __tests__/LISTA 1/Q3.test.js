@@ -1,5 +1,5 @@
-import Pilha from "../src/Pilha";
-import trocaTopoBase from "../src/Q3.JS";
+import Pilha from "../../src/Pilha";
+import trocaTopoBase from "../../src/LISTA1/Q3";
 
 let pilha;
 

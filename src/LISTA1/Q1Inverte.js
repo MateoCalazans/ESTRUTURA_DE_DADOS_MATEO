@@ -1,4 +1,4 @@
-import Pilha from "./Pilha";
+import Pilha from "../Pilha";  
 
 function inverte(palavra){
     let pilha = new Pilha(palavra.length);

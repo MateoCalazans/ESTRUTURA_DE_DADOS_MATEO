@@ -1,4 +1,4 @@
-import decimalParaBinario from "../src/Q4";
+import decimalParaBinario from "../../src/LISTA1/Q4";
 
 test("Conversão de decimal para binário", () => {
     expect(decimalParaBinario(0)).toBe("0");

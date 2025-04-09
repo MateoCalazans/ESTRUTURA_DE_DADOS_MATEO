@@ -1,4 +1,4 @@
-import PilhaDupla from "../src/Q2.js";
+import PilhaDupla from "../../src/LISTA1/Q2";
 
 let m;
 

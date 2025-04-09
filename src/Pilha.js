@@ -1,4 +1,3 @@
-
 class Pilha{
     constructor(size = 5){
         this.dados = [];
@@ -31,7 +30,9 @@ class Pilha{
     isFull(){
         return this.length()===this.size;
     }
-    toString(){}
+    toString(){
+        return this.dados.slice(0, this.topo).toString();
+    }
     clear(){
         this.topo = 0;
     }

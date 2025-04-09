@@ -1,4 +1,4 @@
-import Pilha from "./Pilha";
+import Pilha from "../Pilha";  
 
 function trocaTopoBase (pilha){
     let aux = new Pilha(pilha.size);
