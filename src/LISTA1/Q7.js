@@ -1,29 +1,22 @@
-import Pilha from "../Pilha";  
+import Pilha from "../Pilha";
 
-function removerDuplicatas(pilhaOriginal) {
-  const vistos = new Set();
-  const pilhaSemDuplicatas = new Pilha(pilhaOriginal.length());
-  const pilhaTemporaria = new Pilha(pilhaOriginal.length());
+function removerDuplicatas(arrayEntrada) {
+  const pilha = new Pilha(arrayEntrada.length);
+  const vistos = [];
 
-
-  while (!pilhaOriginal.isEmpty()) {
-    const elemento = pilhaOriginal.pop();
-
-    if (!vistos.has(elemento)) {
-      vistos.add(elemento);
-      pilhaSemDuplicatas.push(elemento);
+  // Percorre do topo para a base (fim para o início)
+  for (let i = arrayEntrada.length - 1; i >= 0; i--) {
+    const elemento = arrayEntrada[i];
+    if (!vistos.includes(elemento)) {
+      vistos.push(elemento);
+      pilha.push(elemento);
     }
   }
 
-
-  while (!pilhaSemDuplicatas.isEmpty()) {
-    pilhaTemporaria.push(pilhaSemDuplicatas.pop());
-  }
-
-
+  // Agora inverte a pilha pra manter a ordem correta (base até o topo)
   const resultado = [];
-  while (!pilhaTemporaria.isEmpty()) {
-    resultado.push(pilhaTemporaria.pop());
+  while (!pilha.isEmpty()) {
+    resultado.push(pilha.pop());
   }
 
   return resultado;
